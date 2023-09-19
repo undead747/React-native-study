@@ -49,6 +49,7 @@ const Welcome = () => {
           }
           keyExtractor={item => item}
           contentContainerStyle={{columnGap: SIZES.small}}
+          horizontal
         /> 
       </View>
     </View>
