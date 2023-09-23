@@ -4,7 +4,7 @@ import { useCallback, useState } from 'react'
 import {Company, JobAbout, JobFooter, JobTabs, ScreenHeaderBtn, Specifics} from '../../components'
 import { Stack, useRouter, useSearchParams } from 'expo-router'
 import useFetch from '../../hook/useFetch'
-import { COLORS, icons } from '../../constants'
+import { COLORS, SIZES, icons } from '../../constants'
 import { ScrollView } from 'react-native-gesture-handler'
 
 const JobDetails = () => {
@@ -36,7 +36,10 @@ const JobDetails = () => {
                 {
                   isLoading ? (
                      <ActivityIndicator size={"large"} color={COLORS.primary} /> 
-                  ) : error ? <Text>There something wrong !</Text> : <View></View>
+                  ) : error ? <Text>There something wrong !</Text> : data?.length === 0 ? <Text>No Data</Text> : (
+                  <View style={{padding: SIZES.medium, paddingBottom: 100}}>
+                  </View>
+                  ) 
                 }
             </ScrollView>          
         </Stack.Screen>
