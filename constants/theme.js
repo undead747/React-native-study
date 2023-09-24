@@ -11,9 +11,9 @@ const COLORS = {
 };
 
 const FONT = {
-  regular: "DM-Regular",
-  medium: "DM-Medium",
-  bold: "DM-Bold",
+  regular: "DMSans-Regular",
+  medium: "DMSans-Medium",
+  bold: "DMSans-Bold",
 };
 
 const SIZES = {
